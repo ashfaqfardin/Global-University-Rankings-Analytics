@@ -8,7 +8,7 @@ The scraper targets the scrollable (virtualized) table on that page and performs
 
 Here's the tableau [preview](https://public.tableau.com/app/profile/mohammad.ashfaq.ur.rahman/viz/GlobalUniversityRankingsAnalytics/Dashboard1?publish=yes):
 
-![Tableau Preview](snapshots\tableau_preview.png)
+![Tableau Preview](./snapshots/tableau_preview.png)
 
 ## What this repository contains
 

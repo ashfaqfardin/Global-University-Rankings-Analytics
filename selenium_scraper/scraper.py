@@ -259,7 +259,7 @@ def gather_all_rows_by_scrolling(driver, min_wait, max_wait, expected_total=None
 
 def main():
     parser = argparse.ArgumentParser(description="Scrape THE world university rankings (latest) table")
-    parser.add_argument("--output", "-o", default="the_world_ranking.csv", help="CSV output path")
+    parser.add_argument("--output", "-o", default="data/the_world_ranking.csv", help="CSV output path")
     parser.add_argument("--headless", action="store_true", help="Run browser in headless mode")
     parser.add_argument("--dry-run", action="store_true", help="Don't save CSV, just check extraction")
     parser.add_argument("--min-wait", type=float, default=0.8, help="Minimum human-like wait between actions (seconds)")

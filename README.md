@@ -1,19 +1,21 @@
 # Global University Rankings Analytics
 
-This repository contains a small Selenium-based Python scraper that extracts the main university ranking table from:
+## Overview
 
-https://www.timeshighereducation.com/world-university-rankings/latest/world-ranking
+This repository contains a Selenium-based Python scraper that extracts university ranking data from the [THE World University Rankings](https://www.timeshighereducation.com/world-university-rankings/latest/world-ranking). The scraper targets the page's virtualized, scrollable table and performs a deterministic sweep to gather all rows.
 
-The scraper targets the scrollable (virtualized) table on that page and performs a deterministic sweep of the table's scroll container to gather all rows.
+### Tableau Dashboard
 
-Here's the tableau [preview](https://public.tableau.com/app/profile/mohammad.ashfaq.ur.rahman/viz/GlobalUniversityRankingsAnalytics/Dashboard1?publish=yes):
+View the interactive analysis here: [Global University Rankings Analytics Dashboard](https://public.tableau.com/app/profile/mohammad.ashfaq.ur.rahman/viz/GlobalUniversityRankingsAnalytics/Dashboard1?publish=yes)
 
 ![Tableau Preview](./snapshots/tableau_preview.png)
 
 ## What this repository contains
 
-- `selemium_scrapper/scrapper.py` — the scraper script. Use the `--help` flag to see runtime options.
-- `the_world_ranking.csv` — example output saved from a recent run (may be overwritten when you run the scraper).
+- `selenium_scraper/scraper.py` — the scraper script. Use the `--help` flag to see runtime options.
+- `data_preprocessing/preprocessing.ipynb` - the data preprocessing script.
+- `data/the_world_ranking.csv` — example output saved from a recent run (may be overwritten when you run the scraper).
+- `data/cleaned_world_ranking.csv` — example output of recent run after data preprocessing.
 - `requirements.txt` — Python package requirements for the project.
 
 ## Quick Start (Windows / PowerShell)
@@ -41,26 +43,26 @@ pip install -r requirements.txt
 5. Run the scraper (non-headless to watch what happens):
 
 ```powershell
-python .\selemium_scrapper\scrapper.py --output the_world_ranking.csv
+python .\selenium_scrapper\scrapper.py --output the_world_ranking.csv
 ```
 
 To run headless and speed up scraping, set the `--headless` flag:
 
 ```powershell
-python .\selemium_scrapper\scrapper.py --headless --min-wait 0.15 --max-wait 0.30 --output the_world_ranking.csv
+python .\selenium_scrapper\scrapper.py --headless --min-wait 0.15 --max-wait 0.30 --output the_world_ranking.csv
 ```
 
 To only test the extraction (don't write CSV):
 
 ```powershell
-python .\selemium_scrapper\scrapper.py --dry-run
+python .\selenium_scrapper\scrapper.py --dry-run
 ```
 
 ## Script options
 
-Run `python selemium_scrapper/scrapper.py --help` for details. Key flags used in practice:
+Run `python selenium_scrapper/scrapper.py --help` for details. Key flags used in practice:
 
-- `--output, -o`: CSV output path (default `the_world_ranking.csv`).
+- `--output, -o`: CSV output path (default `data/the_world_ranking.csv`).
 - `--headless`: Run browser in headless mode.
 - `--dry-run`: Do not save CSV (useful for quick checks).
 - `--min-wait` / `--max-wait`: Small random wait window between actions to mimic human behaviour and allow lazy loading.
@@ -94,7 +96,7 @@ This approach was chosen because THE uses a virtualized table (huge `tbody` heig
 Run with the smaller human-wait window used during development (faster, but keep it polite):
 
 ```powershell
-python .\selemium_scrapper\scrapper.py --headless --min-wait 0.12 --max-wait 0.30 --output the_world_ranking.csv
+python .\selenium_scrapper\scrapper.py --headless --min-wait 0.12 --max-wait 0.30 --output the_world_ranking.csv
 ```
 
 Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live ranking dataset).
@@ -117,5 +119,9 @@ Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live 
 
 ## Files added
 
-- `selemium_scrapper/scrapper.py` — scraping logic.
+- `selenium_scraper/scraper.py` — scraping logic.
 - `requirements.txt` — dependency manifest for Python packages used.
+
+## Contact Details
+
+If you need assistance running this code or help with any scraping-related tasks, feel free to contact me at **[imashfaqfardin@gmail.com](mailto:imashfaqfardin@gmail.com)**.

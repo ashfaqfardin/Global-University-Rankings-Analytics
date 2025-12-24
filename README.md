@@ -1,4 +1,10 @@
 # Global University Rankings Analytics
+![Contributors](https://img.shields.io/github/contributors/ashfaqfardin/Global-University-Rankings-Analytics)
+![Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics)
+![Good First Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics/good%20first%20issue)
+![Last Commit](https://img.shields.io/github/last-commit/ashfaqfardin/Global-University-Rankings-Analytics)
+![Repo Size](https://img.shields.io/github/repo-size/ashfaqfardin/Global-University-Rankings-Analytics)
+![License](https://img.shields.io/github/license/ashfaqfardin/Global-University-Rankings-Analytics)
 
 ## Overview
 

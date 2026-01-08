@@ -6,6 +6,10 @@
 ![Repo Size](https://img.shields.io/github/repo-size/ashfaqfardin/Global-University-Rankings-Analytics)
 ![License](https://img.shields.io/github/license/ashfaqfardin/Global-University-Rankings-Analytics)
 
+## Table of Contents
+
+[Overview](#overview) | [Tableau Dashboard Preview](#tableau-dashboard-preview) | [What this repository contains](#what-this-repository-contains) | [Quick Start](#quick-start-windows--powershell) | [Script options](#script-options) | [Data Preprocessing](#data-preprocessing) | [How the scraper works](#how-the-scraper-works-summary) | [Debugging & Troubleshooting](#debugging--troubleshooting) | [Reproducing the exact run](#reproducing-the-exact-run) | [Findings](#findings) | [Limitations](#limitations) | [Files added](#files-added) | [Contact Details](#contact-details)
+
 ## Overview
 
 This repository contains a Selenium-based Python scraper that extracts university ranking data from the [THE World University Rankings](https://www.timeshighereducation.com/world-university-rankings/latest/world-ranking). The scraper targets the page's virtualized, scrollable table and performs a deterministic sweep to gather all rows.
@@ -20,6 +24,7 @@ View the interactive analysis here: [Global University Rankings Analytics Dashbo
 ![Tableau Preview](./snapshots/tableau_preview_2.png)
 
 This preview image shows the key metrics and visualizations from the interactive Tableau dashboard, providing a quick overview of the data insights before viewing the full dashboard.
+
 
 ## What this repository contains
 

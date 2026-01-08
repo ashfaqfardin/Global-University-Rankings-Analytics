@@ -12,9 +12,14 @@ This repository contains a Selenium-based Python scraper that extracts universit
 
 ### Tableau Dashboard
 
-View the interactive analysis here: [Global University Rankings Analytics Dashboard](https://public.tableau.com/app/profile/mohammad.ashfaq.ur.rahman/viz/GlobalUniversityRankingsAnalytics/Dashboard1?publish=yes)
+View the interactive analysis here: [Global University Rankings Analytics Dashboard](https://public.tableau.com/app/profile/mohammad.ashfaq.ur.rahman/viz/GlobalUniversityRankingsAnalytics/GlobalUniversityRankingAnalysis)
 
-![Tableau Preview](./snapshots/tableau_preview.png)
+### Tableau Dashboard Preview
+
+![Tableau Preview](./snapshots/tableau_preview_1.png)
+![Tableau Preview](./snapshots/tableau_preview_2.png)
+
+This preview image shows the key metrics and visualizations from the interactive Tableau dashboard, providing a quick overview of the data insights before viewing the full dashboard.
 
 ## What this repository contains
 
@@ -49,30 +54,41 @@ pip install -r requirements.txt
 5. Run the scraper (non-headless to watch what happens):
 
 ```powershell
-python .\selenium_scrapper\scrapper.py --output the_world_ranking.csv
+python .\selenium_scraper\scraper.py --output the_world_ranking.csv
 ```
 
 To run headless and speed up scraping, set the `--headless` flag:
 
 ```powershell
-python .\selenium_scrapper\scrapper.py --headless --min-wait 0.15 --max-wait 0.30 --output the_world_ranking.csv
+python .\selenium_scraper\scraper.py --headless --min-wait 0.15 --max-wait 0.30 --output the_world_ranking.csv
 ```
 
 To only test the extraction (don't write CSV):
 
 ```powershell
-python .\selenium_scrapper\scrapper.py --dry-run
+python .\selenium_scraper\scraper.py --dry-run
 ```
 
 ## Script options
 
-Run `python selenium_scrapper/scrapper.py --help` for details. Key flags used in practice:
+Run `python selenium_scraper/scraper.py --help` for details. Key flags used in practice:
 
 - `--output, -o`: CSV output path (default `data/the_world_ranking.csv`).
 - `--headless`: Run browser in headless mode.
 - `--dry-run`: Do not save CSV (useful for quick checks).
 - `--min-wait` / `--max-wait`: Small random wait window between actions to mimic human behaviour and allow lazy loading.
 - `--url`: Alternate URL to scrape (default is the THE world ranking page).
+
+## Data Preprocessing
+
+After scraping, the raw data is cleaned and preprocessed using the Jupyter notebook located at `data_preprocessing/preprocessing.ipynb`. This notebook:
+
+- Removes duplicate entries
+- Handles missing or null values
+- Normalizes column names and formats
+- Converts data types (e.g., rankings from string to numeric)
+- Filters out incomplete records
+- Generates the cleaned output file: `data/cleaned_world_ranking.csv`
 
 ## How the scraper works (summary)
 
@@ -91,21 +107,22 @@ This approach was chosen because THE uses a virtualized table (huge `tbody` heig
   - Run without `--headless` to watch the browser; overlays (cookie dialogs) or interstitials might prevent correct rendering or interaction.
   - Increase `--max-wait` to give the site more time to render rows.
 
-- If the site displays cookie-consent modal or accepts geographic checks, you may need to accept or close that overlay manually (or add a handler in `scrapper.py` to close it automatically).
+- If the site displays cookie-consent modal or accepts geographic checks, you may need to accept or close that overlay manually (or add a handler in `scraper.py` to close it automatically).
 
 - If you get `selenium.common.exceptions.SessionNotCreatedException` or `chromedriver` errors, check that `chromedriver.exe` is on PATH and matches Chrome.
 
-- If you prefer automatic driver management, install `webdriver-manager` and either modify `scrapper.py` to use it or install ChromeDriver into PATH using a package manager.
+- If you prefer automatic driver management, install `webdriver-manager` and either modify `scraper.py` to use it or install ChromeDriver into PATH using a package manager.
 
 ## Reproducing the exact run
 
 Run with the smaller human-wait window used during development (faster, but keep it polite):
 
 ```powershell
-python .\selenium_scrapper\scrapper.py --headless --min-wait 0.12 --max-wait 0.30 --output the_world_ranking.csv
+python .\selenium_scraper\scraper.py --headless --min-wait 0.12 --max-wait 0.30 --output the_world_ranking.csv
 ```
 
-Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live ranking dataset).
+Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live ranking dataset).:
+
 
 ## Findings
 

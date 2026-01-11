@@ -9,7 +9,6 @@ from selenium.common.exceptions import (
 import pandas as pd
 import time
 import argparse
-# import sys
 import random
 import re
 

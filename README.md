@@ -1,4 +1,6 @@
 # Global University Rankings Analytics
+![Project Thumbnail](./thumbnail.png)
+
 ![Contributors](https://img.shields.io/github/contributors/ashfaqfardin/Global-University-Rankings-Analytics)
 ![Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics)
 ![Good First Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics/good%20first%20issue)

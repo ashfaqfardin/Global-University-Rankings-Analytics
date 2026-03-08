@@ -1,9 +1,9 @@
 # Global University Rankings Analytics
 ![Project Thumbnail](./images/thumbnail.png)
 
-This thumbnail image was generated using Google's nanoBanana AI image generator, based on the prompt:
+This thumbnail image was generated using Google's Gemini 2.5 Pro Image (Nano Banana Pro), based on the prompt:
 
-*"Read the following README file and create a thumbnail image that visually represents the project. The image should include elements related to data scraping, university rankings, and analytics. Use a modern and clean design style with a color scheme that conveys professionalism and technology."*
+*"Read the following README file and create a thumbnail image of size 3072x864 that visually represents the project. The image should include elements related to data scraping, university rankings, and analytics. Use a modern and clean design style with a color scheme that conveys professionalism and technology."*
 
 ![Contributors](https://img.shields.io/github/contributors/ashfaqfardin/Global-University-Rankings-Analytics)
 ![Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics)
@@ -39,9 +39,11 @@ View the interactive analysis here: [Global University Rankings Analytics Dashbo
 ### Tableau Dashboard Preview
 
 ![Tableau Preview](./images/tableau_preview_1.png)
+*The dashboard shows a **positive relationship between research quality and teaching scores**, as universities with higher research scores (around 70–90) generally achieve teaching scores above 30–40. A similar trend appears between **international outlook and teaching**, indicating that globally connected universities often have stronger teaching performance. The **industry income vs teaching plot shows the strongest upward trend**, suggesting that universities with stronger industry partnerships tend to perform better academically. Additionally, the **rank distribution shows most universities fall in the 301–500 tier**, while relatively few institutions reach the top 1–100 ranks, highlighting the competitiveness of elite global universities. The dashboard shows that **Top-50 universities are concentrated in a few countries**, particularly the United States and the United Kingdom, indicating strong dominance in global higher education. The scatter plots also reveal that universities with **higher research quality and stronger international outlook generally achieve higher teaching scores**, suggesting these factors contribute to academic performance. Additionally, the rank distribution indicates that **most universities fall within the 301–500 band**, highlighting how competitive it is to reach the top tiers such as the Top-50.*
+
 ![Tableau Preview](./images/tableau_preview_2.png)
 
-This preview image shows the key metrics and visualizations from the interactive Tableau dashboard, providing a quick overview of the data insights before viewing the full dashboard.
+*The provided dashboard features a global map of university density and a scatter plot that illustrates a clear **inverse relationship** between average numeric rank and average overall score. The **Global Map: University Density** shows geographical distribution across numerous countries, with darker shading typically indicating higher concentrations of institutions. Meanwhile, the **Rank vs. Overall Score** plot displays a downward trend where universities with the **highest overall scores (near 90)** occupy the top ranks, while scores decrease significantly as the numeric rank approaches 1500.*
 
 
 ## What this repository contains
@@ -138,7 +140,7 @@ This approach was chosen because THE uses a virtualized table (huge `tbody` heig
 
 ## Reproducing the exact run
 
-Run with the smaller human-wait window used during development (faster, but keep it polite):
+Run with the smaller human-wait window used during development and headless mode to speed up scraping while still allowing the site to render properly:
 
 ```powershell
 python .\src\scraper.py --headless --min-wait 0.12 --max-wait 0.30 --output the_world_ranking.csv
@@ -176,7 +178,16 @@ Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live 
 ## Files added
 
 - `src/scraper.py` — scraping logic.
+- `src/preprocessing.ipynb` — data cleaning and preprocessing steps.
+- `data/the_world_ranking.csv` — example output from a recent scraper run.
+- `data/cleaned_world_ranking.csv` — example output after preprocessing.
 - `requirements.txt` — dependency manifest for Python packages used.
+
+## Acknowledgements
+- The scraper was developed using Selenium WebDriver and Python.
+- The Tableau dashboard was created using Tableau Public.
+- The project was inspired by the need to analyze global university rankings and understand the factors contributing to academic excellence.
+- Data was sourced from the Times Higher Education World University Rankings website.
 
 ## Contact Details
 

@@ -30,8 +30,8 @@ This preview image shows the key metrics and visualizations from the interactive
 
 ## What this repository contains
 
-- `selenium_scraper/scraper.py` — the scraper script. Use the `--help` flag to see runtime options.
-- `data_preprocessing/preprocessing.ipynb` - the data preprocessing script.
+- `src/scraper.py` — the scraper script. Use the `--help` flag to see runtime options.
+- `src/notebook/preprocessing.ipynb` - the data preprocessing script.
 - `data/the_world_ranking.csv` — example output saved from a recent run (may be overwritten when you run the scraper).
 - `data/cleaned_world_ranking.csv` — example output of recent run after data preprocessing.
 - `requirements.txt` — Python package requirements for the project.
@@ -61,24 +61,24 @@ pip install -r requirements.txt
 5. Run the scraper (non-headless to watch what happens):
 
 ```powershell
-python .\selenium_scraper\scraper.py --output the_world_ranking.csv
+python .\src\scraper.py --output the_world_ranking.csv
 ```
 
 To run headless and speed up scraping, set the `--headless` flag:
 
 ```powershell
-python .\selenium_scraper\scraper.py --headless --min-wait 0.15 --max-wait 0.30 --output the_world_ranking.csv
+python .\src\scraper.py --headless --min-wait 0.15 --max-wait 0.30 --output the_world_ranking.csv
 ```
 
 To only test the extraction (don't write CSV):
 
 ```powershell
-python .\selenium_scraper\scraper.py --dry-run
+python .\src\scraper.py --dry-run
 ```
 
 ## Script options
 
-Run `python selenium_scraper/scraper.py --help` for details. Key flags used in practice:
+Run `python src/scraper.py --help` for details. Key flags used in practice:
 
 - `--output, -o`: CSV output path (default `data/the_world_ranking.csv`).
 - `--headless`: Run browser in headless mode.
@@ -88,7 +88,7 @@ Run `python selenium_scraper/scraper.py --help` for details. Key flags used in p
 
 ## Data Preprocessing
 
-After scraping, the raw data is cleaned and preprocessed using the Jupyter notebook located at `data_preprocessing/preprocessing.ipynb`. This notebook:
+After scraping, the raw data is cleaned and preprocessed using the Jupyter notebook located at `src/notebook/preprocessing.ipynb`. This notebook:
 
 - Removes duplicate entries
 - Handles missing or null values
@@ -125,7 +125,7 @@ This approach was chosen because THE uses a virtualized table (huge `tbody` heig
 Run with the smaller human-wait window used during development (faster, but keep it polite):
 
 ```powershell
-python .\selenium_scraper\scraper.py --headless --min-wait 0.12 --max-wait 0.30 --output the_world_ranking.csv
+python .\src\scraper.py --headless --min-wait 0.12 --max-wait 0.30 --output the_world_ranking.csv
 ```
 
 Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live ranking dataset).:
@@ -149,7 +149,7 @@ Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live 
 
 ## Files added
 
-- `selenium_scraper/scraper.py` — scraping logic.
+- `src/scraper.py` — scraping logic.
 - `requirements.txt` — dependency manifest for Python packages used.
 
 ## Contact Details

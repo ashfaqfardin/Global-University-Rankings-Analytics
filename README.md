@@ -2,8 +2,9 @@
 ![Project Thumbnail](./images/thumbnail.png)
 
 This thumbnail image was generated using Google's Gemini 2.5 Pro Image (Nano Banana Pro), based on the prompt:
-
-*"Read the following README file and create a thumbnail image of size 3072x864 that visually represents the project. The image should include elements related to data scraping, university rankings, and analytics. Use a modern and clean design style with a color scheme that conveys professionalism and technology."*
+```markdown
+Read the following README file and create a thumbnail image of size 3072x864 that visually represents the project. The image should include elements related to data scraping, university rankings, and analytics. Use a modern and clean design style with a color scheme that conveys professionalism and technology.
+```
 
 ![Contributors](https://img.shields.io/github/contributors/ashfaqfardin/Global-University-Rankings-Analytics)
 ![Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics)

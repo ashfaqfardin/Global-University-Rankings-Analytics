@@ -1,5 +1,5 @@
 # Global University Rankings Analytics
-![Project Thumbnail](./thumbnail.png)
+![Project Thumbnail](./images/thumbnail.png)
 
 ![Contributors](https://img.shields.io/github/contributors/ashfaqfardin/Global-University-Rankings-Analytics)
 ![Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics)
@@ -22,8 +22,8 @@ View the interactive analysis here: [Global University Rankings Analytics Dashbo
 
 ### Tableau Dashboard Preview
 
-![Tableau Preview](./snapshots/tableau_preview_1.png)
-![Tableau Preview](./snapshots/tableau_preview_2.png)
+![Tableau Preview](./images/tableau_preview_1.png)
+![Tableau Preview](./images/tableau_preview_2.png)
 
 This preview image shows the key metrics and visualizations from the interactive Tableau dashboard, providing a quick overview of the data insights before viewing the full dashboard.
 
@@ -31,7 +31,7 @@ This preview image shows the key metrics and visualizations from the interactive
 ## What this repository contains
 
 - `src/scraper.py` — the scraper script. Use the `--help` flag to see runtime options.
-- `src/notebook/preprocessing.ipynb` - the data preprocessing script.
+- `src/preprocessing.ipynb` - the data preprocessing script.
 - `data/the_world_ranking.csv` — example output saved from a recent run (may be overwritten when you run the scraper).
 - `data/cleaned_world_ranking.csv` — example output of recent run after data preprocessing.
 - `requirements.txt` — Python package requirements for the project.
@@ -88,7 +88,7 @@ Run `python src/scraper.py --help` for details. Key flags used in practice:
 
 ## Data Preprocessing
 
-After scraping, the raw data is cleaned and preprocessed using the Jupyter notebook located at `src/notebook/preprocessing.ipynb`. This notebook:
+After scraping, the raw data is cleaned and preprocessed using the Jupyter notebook located at `src/preprocessing.ipynb`. This notebook:
 
 - Removes duplicate entries
 - Handles missing or null values

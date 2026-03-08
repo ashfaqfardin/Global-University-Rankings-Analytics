@@ -149,13 +149,23 @@ Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live 
 
 ## Findings
 
-- **Singapore stands out as the strongest overall performer**, even though it has just two ranked universities (NUS and NTU). Both institutions consistently score highly across all evaluation areas.
-
-- **Among the top 25 universities globally**, Singapore achieves the highest results in all major categories—Teaching, Research Environment, Research Quality, and Industry Income. This reflects a well-rounded and robust higher-education system.
+- **Singapore appears highly competitive despite its size**, with both National University of Singapore (Rank 17) and Nanyang Technological University (Rank 26) in the Top-50, meaning **100% of its listed universities fall within the elite tier**. 
 
 - **Singapore’s lead is most evident in Research and Industry-related metrics**, where it outperforms every other country by a wide margin. Hong Kong and the Netherlands follow, but the difference remains substantial.
 
 - **Hong Kong ranks as the next strongest performer**, especially in Teaching and Research Quality. However, Singapore still maintains a noticeably higher Teaching score, suggesting a more advanced academic and instructional environment.
+
+- **The United States dominates the Top-50 universities list with 23 institutions**, including Massachusetts Institute of Technology (Rank 1), Harvard University (Rank 3), Stanford University (Rank 2), and Princeton University (Rank 8). This means **nearly half of the Top-50 universities come from one country**. 
+
+- **The United Kingdom has 6 universities in the Top-50**, led by University of Oxford (Rank 4) and University of Cambridge (Rank 5), followed by Imperial College London (Rank 6) and UCL (Rank 9). This places the UK **second globally in representation within the Top-50**. 
+
+- **China has 5 universities in the Top-50**, including Tsinghua University (Rank 12) and Peking University (Rank 13). This indicates **China is the most represented Asian country in the elite group**. 
+
+- **The rank vs overall score chart shows a strong negative relationship**: universities with **average ranks near the top (low numeric rank values)** consistently have **overall scores above ~80**, while institutions with **higher rank numbers (toward 1000+) drop to overall scores around 40–50**. 
+
+- **Research quality and teaching scores show a clustered relationship**, where most institutions with **research scores above ~70 also maintain teaching scores above ~50**, suggesting strong research performance is typically paired with strong teaching outcomes in the dataset. 
+
+- **Industry income scores vary more widely than other metrics**, with universities having **similar teaching scores (around 50–60)** but **industry income ranging roughly from 10 to 70**, indicating large differences in commercialization and industry partnerships. 
 
 ## Limitations
 

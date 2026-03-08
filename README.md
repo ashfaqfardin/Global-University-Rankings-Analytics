@@ -184,7 +184,7 @@ Expected outcome: a CSV with ~3,000+ rows (the exact number depends on the live 
 - `requirements.txt` — dependency manifest for Python packages used.
 
 ## Acknowledgements
-- The scraper was developed using Selenium WebDriver and Python.
+- The scraper was developed using Selenium WebDriver.
 - The Tableau dashboard was created using Tableau Public.
 - The project was inspired by the need to analyze global university rankings and understand the factors contributing to academic excellence.
 - Data was sourced from the Times Higher Education World University Rankings website.

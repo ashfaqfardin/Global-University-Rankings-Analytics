@@ -1,6 +1,10 @@
 # Global University Rankings Analytics
 ![Project Thumbnail](./images/thumbnail.png)
 
+This thumbnail image was generated using Google's nanoBanana AI image generator, based on the prompt:
+
+*"Read the following README file and create a thumbnail image that visually represents the project. The image should include elements related to data scraping, university rankings, and analytics. Use a modern and clean design style with a color scheme that conveys professionalism and technology."*
+
 ![Contributors](https://img.shields.io/github/contributors/ashfaqfardin/Global-University-Rankings-Analytics)
 ![Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics)
 ![Good First Issues](https://img.shields.io/github/issues/ashfaqfardin/Global-University-Rankings-Analytics/good%20first%20issue)
@@ -10,7 +14,19 @@
 
 ## Table of Contents
 
-[Overview](#overview) | [Tableau Dashboard Preview](#tableau-dashboard-preview) | [What this repository contains](#what-this-repository-contains) | [Quick Start](#quick-start-windows--powershell) | [Script options](#script-options) | [Data Preprocessing](#data-preprocessing) | [How the scraper works](#how-the-scraper-works-summary) | [Debugging & Troubleshooting](#debugging--troubleshooting) | [Reproducing the exact run](#reproducing-the-exact-run) | [Findings](#findings) | [Limitations](#limitations) | [Files added](#files-added) | [Contact Details](#contact-details)
+1. [Overview](#overview)
+2. [Tableau Dashboard Preview](#tableau-dashboard-preview)
+3. [What this repository contains](#what-this-repository-contains)
+4. [Quick Start](#quick-start-windows--powershell)
+5. [Script options](#script-options)
+6. [Data Preprocessing](#data-preprocessing)
+7. [How the scraper works](#how-the-scraper-works-summary)
+8. [Debugging & Troubleshooting](#debugging--troubleshooting)
+9. [Reproducing the exact run](#reproducing-the-exact-run)
+10. [Findings](#findings)
+11. [Limitations](#limitations)
+12. [Files added](#files-added)
+13. [Contact Details](#contact-details)
 
 ## Overview
 
